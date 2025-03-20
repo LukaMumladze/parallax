@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');    
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+ }
+    
+body {
+      font-family: "Orbitron", sans-serif;
+      overflow-x: hidden;
+      background-color: #000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ .parallax-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s ease-in-out, transform   0.5s ease-out;
+}
+
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+  opacity: 0.9; 
+  transition: transform 0.5s ease-in-out;
+}
+
+.parallax-container:nth-child(even) {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8));
+}
+
+.parallax-container.in-view {
+  transform: scale(1.02);
+  opacity: 1;
+}
+
+.parallax-container {
+  filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.5));
+}
+
+.parallax-container:hover::before {
+  transform: scale(1.05);
+}
+
+    
+#section1::before {
+      background-image: url('https://i.imgur.com/t1i0cuV.jpeg');
+    }
+    
+#section2::before {
+      background-image: url('https://w.wallhaven.cc/full/0j/wallhaven-0jd7jy.jpg');
+    }
+    
+ 
+#section3::before {
+      background-image: url('https://w.wallhaven.cc/full/xl/wallhaven-xl7zpo.png');
+}
+    
+.text-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 80%;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    }
+    
+h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    
+p {
+      font-size: 1.5rem;
+}
+    
+.parallax-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+  transition: transform 0.1s ease-out;
+}
+
+.planet-1 {
+  top: 30%;
+  left: 15%;
+  width: 180px;
+}
+
+.asteroid-field {
+  top: 55%;
+  right: 20%;
+  width: 250px;
+}
+
+.spacecraft {
+  bottom: 25%;
+  right: 15%;
+  width: 150px;
+}
+
+.distant-galaxy {
+  top: 10%;
+  left: 20%;
+  width: 220px;
+}
+
+.comet {
+  top: 20%;
+  right: 25%;
+  width: 120px;
+  
+}
+
+.meteors {
+  bottom: 10%;
+  left: 10%;
+  width: 300px;
+}
+
+.spaceShip {
+  top: 30%;
+  right: 15%;
+  width: 120px;
+}
+.nebula {
+  top: 50%;
+  left: 10%;
+  width: 300px;
+}
+
+.meteor-shower {
+  top: 50%;
+  left: 5%;
+  width:300px;
+}
